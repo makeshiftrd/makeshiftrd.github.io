@@ -1,66 +1,116 @@
+/* General Body Styles */
 body {
-    background-color: yellow;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* Cheerios Background Styles */
+    /* IMPORTANT: Replace 'https://via.placeholder.com/100x100/FFF8DC/000000?text=Cheerio' with an actual repeating Cheerios pattern image URL. */
+    background-image: url('https://via.placeholder.com/100x100/FFF8DC/E0B400?text=Cheerio');
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-color: #FFF8DC; /* A creamy base color */
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #E0B400; /* A warm, golden color */
+    color: white;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5rem;
 }
 
+/* Main Content Styles */
 main {
-    padding: 20px;
-    max-width: 800px;
+    flex-grow: 1;
+    max-width: 960px;
     margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
 }
 
-section h2 {
-    color: #0056b3;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #E0B400;
+    font-size: 2rem;
     margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    line-height: 1.7;
 }
 
+/* Footer Styles */
 footer {
+    background-color: #E0B400;
+    color: white;
     text-align: center;
     padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-    margin-top: 20px;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
     main {
-        margin: 10px;
+        margin: 15px;
         padding: 15px;
     }
 
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
-    section h2 {
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h2 {
         font-size: 1.5rem;
+    }
+
+    section {
+        padding: 1rem;
     }
 }
